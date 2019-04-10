@@ -13,14 +13,11 @@ RSpec.describe "A bank account" do
 
     end
     
-
-
     it "a deposit increases the balance by that amount" do
         a = Account.new
         a.deposit(100, "10/02/2019")
         expect(a.balance).to eq 100
     end
-
 
     it "a withdrawal decreases the balance by that amount" do
         a = Account.new
@@ -48,6 +45,12 @@ RSpec.describe "A bank account" do
         expect(a.statement.transactions.length).to eq 1
     end
 
+    # it "renders the table with the transactions" do
+    #     a = Account.new
+    #     a.deposit(100, "10/02/2019")
+    #     a.store_transaction
+    #     a.print_statement
+    # end
 
 end
 
