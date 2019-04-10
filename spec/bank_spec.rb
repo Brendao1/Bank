@@ -41,13 +41,14 @@ RSpec.describe "A bank account" do
         expect(a.deposit_amount).to eq nil
     end
 
-    # it "stores a transaction in the Statement class" do
-    #     a = Account.new
-    #     a.deposit(100, "10/02/2019")
-    #     a.withdrawal(30, "11/02/2019")
-    #     a.store_transactions
-    #     expect()
-    # end
+    it "stores a transaction in the Statement class" do
+        a = Account.new
+        a.deposit(100, "10/02/2019")
+        a.store_transaction
+        expect(a.statement.transactions.length).to eq 1
+    end
+
+
 end
 
 

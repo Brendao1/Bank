@@ -1,3 +1,5 @@
+require_relative 'account'
+require 'terminal-table'
 
 class Statement
 
@@ -6,5 +8,6 @@ class Statement
     def initialize
         @transactions = []
     end
+
 
 end

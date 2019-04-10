@@ -30,5 +30,13 @@ class Account
         @balance -= withdrawal_amount
     end
 
+    def store_transaction
+        @statement.transactions << {date: @date, credit: @deposit_amount, debit: @withdrawal_amount, balance: @balance}
+    end
+
+    def print_statement
+        @statement.print_statement()
+    end
+
 end
 
