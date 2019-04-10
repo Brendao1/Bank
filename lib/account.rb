@@ -1,4 +1,3 @@
-require 'terminal-table'
 require 'date'
 
 class Account
@@ -10,6 +9,13 @@ class Account
     def initialize
         @balance = STARTING_BALANCE
         @transactions = []
+    end
+
+
+    def deposit(deposit_amount, date)
+        @deposit_amount = deposit_amount
+        @date = date
+        @balance += @deposit_amount
     end
 
 end
