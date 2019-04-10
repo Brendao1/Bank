@@ -1,15 +1,16 @@
+require_relative 'statement'
 require 'date'
 
 class Account
 
-    attr_accessor   :balance 
+    attr_accessor   :balance, :statement 
     attr_reader     :withdrawal_amount, :deposit_amount
 
     STARTING_BALANCE = 0
 
     def initialize
         @balance = STARTING_BALANCE
-        @transactions = []
+        @statement = Statement.new
     end
 
 

@@ -7,6 +7,13 @@ RSpec.describe "A bank account" do
         expect(b.account.balance).to eq 0
     end
 
+    it "a bank account is created with a Statement which stores the transactions" do
+        a = Account.new
+        expect(a.statement.transactions).to eq []
+
+    end
+    
+
 
     it "a deposit increases the balance by that amount" do
         a = Account.new
@@ -33,6 +40,14 @@ RSpec.describe "A bank account" do
         a.withdrawal(30, "11/02/2019")
         expect(a.deposit_amount).to eq nil
     end
+
+    # it "stores a transaction in the Statement class" do
+    #     a = Account.new
+    #     a.deposit(100, "10/02/2019")
+    #     a.withdrawal(30, "11/02/2019")
+    #     a.store_transactions
+    #     expect()
+    # end
 end
 
 
