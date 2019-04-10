@@ -21,6 +21,12 @@ RSpec.describe "A bank account" do
         a.withdrawal(30, "11/02/2019")
         expect(a.balance).to eq 70
     end
+
+    it "a deposit sets the withdrawal_amount to nil" do
+        a = Account.new
+        a.deposit(100, "10/02/2019")
+        expect(a.withdrawal_amount).to eq nil
+    end
 end
 
 

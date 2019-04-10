@@ -2,7 +2,8 @@ require 'date'
 
 class Account
 
-    attr_accessor :balance
+    attr_accessor   :balance 
+    attr_reader     :withdrawal_amount
 
     STARTING_BALANCE = 0
 
@@ -13,6 +14,7 @@ class Account
 
 
     def deposit(deposit_amount, date)
+        @withdrawal_amount = nil
         @deposit_amount = deposit_amount
         @date = date
         @balance += @deposit_amount
