@@ -1,19 +1,16 @@
-class Account
+require 'terminal-table'
+require 'date'
 
-    STARTING_BALANCE = 0
+class Account
 
     attr_accessor :balance
 
+    STARTING_BALANCE = 0
+
     def initialize
         @balance = STARTING_BALANCE
-
+        @transactions = []
     end
-
-    def balance
-        return @balance
-    end
-
-
 
 end
 
