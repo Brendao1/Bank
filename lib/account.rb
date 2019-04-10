@@ -18,5 +18,13 @@ class Account
         @balance += @deposit_amount
     end
 
+
+    def withdrawal(withdrawal_amount, date)
+        @withdrawal_amount = withdrawal_amount
+        # @date = Date.today()
+        @date = date
+        @balance -= withdrawal_amount
+    end
+
 end
 

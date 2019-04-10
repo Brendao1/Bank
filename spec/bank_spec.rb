@@ -13,6 +13,14 @@ RSpec.describe "A bank account" do
         a.deposit(100, "10/02/2019")
         expect(a.balance).to eq 100
     end
+
+
+    it "a withdrawal decreases the balance by that amount" do
+        a = Account.new
+        a.deposit(100, "10/02/2019")
+        a.withdrawal(30, "11/02/2019")
+        expect(a.balance).to eq 70
+    end
 end
 
 
