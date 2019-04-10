@@ -13,14 +13,12 @@ class Account
         @statement = Statement.new
     end
 
-
     def deposit(deposit_amount, date)
         @withdrawal_amount = nil
         @deposit_amount = deposit_amount
         @date = date
         @balance += @deposit_amount
     end
-
 
     def withdrawal(withdrawal_amount, date)
         @deposit_amount = nil
