@@ -45,12 +45,20 @@ RSpec.describe "A bank account" do
         expect(a.statement.transactions.length).to eq 1
     end
 
-    # it "renders the table with the transactions" do
-    #     a = Account.new
-    #     a.deposit(100, "10/02/2019")
-    #     a.store_transaction
-    #     a.print_statement
-    # end
+    it "renders the table with the transactions" do
+        expected_table = <<-EOF
+        +------------+--------+-------+---------+
+        | date       | credit | debit | balance |
+        +------------+--------+-------+---------+
+        | 10/02/2019 | 100    |       | 100     |
+        | 10/02/2019 | 100    |       | 100     |
+        +------------+--------+-------+---------+
+        EOF
+        a = Account.new
+        a.deposit(100, "10/02/2019")
+        a.store_transaction
+        expect(a.print_statement).to output expected_table.to_str
+    end
 
 end
 
