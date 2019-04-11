@@ -37,11 +37,10 @@ a.store_transaction
 
 a.print_statement
 
-=>
+=> [see output]
 ```
 Provides the following output:
 ```
-
 +------------+--------+-------+---------+
 | date       | credit | debit | balance |
 +------------+--------+-------+---------+
@@ -49,6 +48,10 @@ Provides the following output:
 | 13/01/2012 | 2000   |       | 3000    |
 | 10/01/2012 | 1000   |       | 1000    |
 +------------+--------+-------+---------+
+```
+## How to run the tests
+``` 
+rspec
 ```
 
 ## Screenshot of app running in the terminal
