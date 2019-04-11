@@ -1,4 +1,5 @@
 require 'terminal-table'
+require 'term/ansicolor'
 require 'simplecov'
 require 'simplecov-console'
 
@@ -7,7 +8,7 @@ SimpleCov.start
 
 
 class String
-  # include Term::ANSIColor
+  include Term::ANSIColor
 
   def deindent
     strip.gsub(/^ */, '')
