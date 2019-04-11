@@ -53,6 +53,7 @@ Provides the following output:
 ``` 
 rspec
 ```
+100% test coverage.
 
 ## Screenshot of app running in the terminal
 
