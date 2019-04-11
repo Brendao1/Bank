@@ -20,11 +20,15 @@ Here is an example interaction:
 ```
 a = Account.new
 
-a.deposit(50, "15/02/2019")
+a.deposit(1000, "10/01/2012")
 
 a.store_transaction
 
-a.withdrawal(5, "16/02/2019")
+a.deposit(2000, "13/01/2012")
+
+a.store_transaction
+
+a.withdrawal(500, "14/01/2012")
 
 a.store_transaction
 
@@ -37,8 +41,9 @@ a.print_statement
 +------------+--------+-------+---------+
 | date       | credit | debit | balance |
 +------------+--------+-------+---------+
-| 16/02/2019 |        | 5     | 45      |
-| 15/02/2019 | 50     |       | 50      |
+| 14/01/2012 |        | 500   | 2500    |
+| 13/01/2012 | 2000   |       | 3000    |
+| 10/01/2012 | 1000   |       | 1000    |
 +------------+--------+-------+---------+
  EOF
 ```
