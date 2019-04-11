@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Brendao1/Bank-tech-test.svg?branch=master)](https://travis-ci.org/Brendao1/Bank-tech-test) [![Maintainability](https://api.codeclimate.com/v1/badges/df305c5958b4d53bfcbc/maintainability)](https://codeclimate.com/github/Brendao1/Bank-tech-test/maintainability)
+
+
 # Bank-tech-test
 
 # How to interact with the program
