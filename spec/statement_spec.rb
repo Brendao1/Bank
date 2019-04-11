@@ -7,8 +7,4 @@ RSpec.describe "A Statement" do
         expect(s.transactions.length).to eq 0
     end
 
-    # it "prints the transactions in a table" do
-    #     s = Statement.new
-    # end
-
 end
