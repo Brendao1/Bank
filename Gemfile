@@ -7,5 +7,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 gem 'terminal-table', '~> 1.8'
 
+gem 'simplecov', '~> 0.12.0'
+
 
 
