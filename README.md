@@ -73,3 +73,9 @@ rspec
     There are no restrictions/limits (so the account can be overdrawn)
 - I wrote the tests and the methods, building iteratively
 - After passing the basic acceptance tests, I added Code Climate, Test Coverage and Linting
+
+## Challenges and next steps
+
+Some of the challenges I encountered: <a href="https://github.com/Brendao1/Bank-tech-test/wiki/Difficulties">Difficulties</a>
+    
+Some next steps: <a href="https://github.com/Brendao1/Bank-tech-test/wiki/Next-Steps">Next Steps</a>
