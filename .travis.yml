@@ -15,4 +15,5 @@ before_script:
 script:
   - bundle exec rspec
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - export CC_TEST_REPORTER_ID=<9763919d7119e0e727f8cf7f54965b3db2290237c7c58f1a659960456421fc74> cc-test-reporter after-build --exit-code $?
+  # - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
