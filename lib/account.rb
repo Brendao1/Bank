@@ -1,6 +1,7 @@
 require_relative 'statement'
 require 'date'
 
+
 class Account
   attr_accessor   :balance, :statement
   attr_reader     :withdrawal_amount, :deposit_amount
