@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Brendao1/Bank-tech-test.svg?branch=master)](https://travis-ci.org/Brendao1/Bank-tech-test) [![Maintainability](https://api.codeclimate.com/v1/badges/df305c5958b4d53bfcbc/maintainability)](https://codeclimate.com/github/Brendao1/Bank-tech-test/maintainability)
+[![Build Status](https://travis-ci.org/Brendao1/Bank.svg?branch=master)](https://travis-ci.org/Brendao1/Bank) [![Maintainability](https://api.codeclimate.com/v1/badges/df305c5958b4d53bfcbc/maintainability)](https://codeclimate.com/github/Brendao1/Bank-tech-test/maintainability)
 
 
 # Bank-tech-test
@@ -8,7 +8,7 @@
 Clone this repo and run bundle to install the gems: 
 
 ```
-git clone git@github.com:Brendao1/Bank-tech-test.git
+git clone git@github.com:Brendao1/Bank.git
 
 bundle
 ```
@@ -76,6 +76,6 @@ rspec
 
 ## Challenges and next steps
 
-Some of the challenges I encountered: <a href="https://github.com/Brendao1/Bank-tech-test/wiki/Difficulties">Difficulties</a>
+Some of the challenges I encountered: <a href="https://github.com/Brendao1/Bank/wiki/Difficulties">Difficulties</a>
     
-Some next steps: <a href="https://github.com/Brendao1/Bank-tech-test/wiki/Next-Steps">Next Steps</a>
+Some next steps: <a href="https://github.com/Brendao1/Bank/wiki/Next-Steps">Next Steps</a>
