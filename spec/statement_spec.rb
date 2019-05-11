@@ -1,4 +1,4 @@
-require './lib/bank'
+require './lib/account'
 
 RSpec.describe 'A Statement' do
   it 'is created to store the transactions' do
