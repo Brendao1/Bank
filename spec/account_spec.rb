@@ -3,41 +3,41 @@ require 'spec_helper'
 
 RSpec.describe 'A bank account' do
 
-  it 'a bank account is created with a Statement which stores the transactions' do
-    a = Account.new
-    expect(a.statement.transactions).to eq []
+  before :each do
+    @a = Account.new
   end
 
+  it 'a bank account is created with a Statement which stores the transactions' do
+    expect(@a.statement.transactions).to eq []
+  end
+
+
   it 'a deposit increases the balance by that amount' do
-    a = Account.new
-    a.deposit(100, '10/02/2019')
-    expect(a.balance).to eq 100
+    @a.deposit(100, '10/02/2019')
+    expect(@a.balance).to eq 100
   end
 
   it 'a withdrawal decreases the balance by that amount' do
-    a = Account.new
-    a.deposit(100, '10/02/2019')
-    a.withdrawal(30, '11/02/2019')
-    expect(a.balance).to eq 70
+
+    @a.deposit(100, '10/02/2019')
+    @a.withdrawal(30, '11/02/2019')
+    expect(@a.balance).to eq 70
   end
 
   it 'a deposit sets the withdrawal_amount to nil' do
-    a = Account.new
-    a.deposit(100, '10/02/2019')
-    expect(a.withdrawal_amount).to eq nil
+    @a.deposit(100, '10/02/2019')
+    expect(@a.withdrawal_amount).to eq nil
   end
 
   it 'a withdrawal sets the deposit_amount to nil' do
-    a = Account.new
-    a.withdrawal(30, '11/02/2019')
-    expect(a.deposit_amount).to eq nil
+    @a.withdrawal(30, '11/02/2019')
+    expect(@a.deposit_amount).to eq nil
   end
 
   it 'stores a transaction in the Statement class' do
-    a = Account.new
-    a.deposit(100, '10/02/2019')
-    a.store_transaction
-    expect(a.statement.transactions.length).to eq 1
+    @a.deposit(100, '10/02/2019')
+    @a.store_transaction
+    expect(@a.statement.transactions.length).to eq 1
   end
 
   it 'prints out the transactions in the Statement' do
@@ -50,13 +50,12 @@ RSpec.describe 'A bank account' do
 +------------+--------+-------+---------+
     EOF
 
-    a = Account.new
-    a.deposit(50, '15/02/2019')
-    a.store_transaction
-    a.withdrawal(5, '16/02/2019')
-    a.store_transaction
-    a.print_statement
-    expect { a.print_statement }.to output(expected_table).to_stdout
+    @a.deposit(50, '15/02/2019')
+    @a.store_transaction
+    @a.withdrawal(5, '16/02/2019')
+    @a.store_transaction
+    @a.print_statement
+    expect { @a.print_statement }.to output(expected_table).to_stdout
 
   end
 
